@@ -101,6 +101,26 @@ Get the traceroute path of a domain inside AWS
 List all configured commands at any time
         
     awss 
+---------------------------------------------------------------------
+
+List ec2 instances                  -	ali
+List s3 buckets                     -	alb
+List lambdas                        -	all
+List ssm_parameters                 -	alp
+Get ssm_parameters                  -	agp
+List route53 domains                -	ald
+Get route53 domains                 -	agd
+List lb                             -	allb
+List cloudfront distributions       -	alcf
+
+List commands                       -	awss
+Rename commands                     -	awss configure
+
+Fetch latest data from AWS          -	awss update
+Update project to latest version    -	awss upgrade
+
+--------------------------------------------------
+
 
 Rename any command(s) at any time
 
@@ -131,9 +151,5 @@ Steps to set the project -
        curl -s https://raw.githubusercontent.com/sunil-saini/aws_shortcuts/master/awss.sh -o awss.sh && . ./awss.sh && rm awss.sh
     
 
-Connect to me for any feedback
 
-    email - sunilsaini314@gmail.com
-    linkedin - www.linkedin.com/in/sunilsaini314
-    
 Happy Coding, Enjoy.
