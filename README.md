@@ -85,7 +85,7 @@ List all cloudfront distributions with aliases and configured behaviours
     ad34d2rclw1w4e.cloudfront.net   web.example.com  *-->web.example.com.s3-website-us-east-1.amazonaws.com
 
 
-Get the traceroute path of a domain inside AWS
+Get the traceroute of AWS setup for a DNS record created in Route53
 
     agd <domain>
 
