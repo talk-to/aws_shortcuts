@@ -1,7 +1,8 @@
 # aws_shortcuts
+
 Shorthand configurable personalized commands to work faster on AWS locally
 
-e.g. - 
+e.g. -
 
 List all EC2 instances
 
@@ -16,10 +17,9 @@ List all EC2 instances
     ali 10.10.110.245
     
     instance01	i-91d62f6f	10.10.110.245	56.13.52.19	t2.small	running
-    
-        
+
 List all S3 buckets
-        
+
     alb <any pattern>
     
     alb test1
@@ -27,7 +27,7 @@ List all S3 buckets
     test1.test.bodies
     test1.test.client-logs
     test1.test.files
-        
+
 List all Lambdas
 
     all <any pattern>
@@ -37,7 +37,7 @@ List all Lambdas
     staging.example1
     staging.example2
     staging.example3
-        
+
 List all SSM Parameters
 
     alp <any pattern>
@@ -47,7 +47,7 @@ List all SSM Parameters
     prod.db1.password
     prod.db2.password
     prod.db3.password
-        
+
 Get value of a particular ssm parameter
 
     agp <parameter>
@@ -55,7 +55,7 @@ Get value of a particular ssm parameter
     agp prod.db1.password
     
     xYvd$%sgh#
-        
+
 List all Route53 hosted DNS with their all records type
 
     alz <any pattern>
@@ -73,7 +73,6 @@ List all load balancers with their port(s), instance(s), target group(s) mapping
     
     classic     testclb     internet-facing     ['80-->80', '443-->80']     ['i-a51baa4a', 'i-e4142b1f']
     network     testnlb     internet-facing     ['80-->test-tg']    {'test-tg': [i-d21resde-->80, i-d345werds-->80]}
-    
 
 List all cloudfront distributions with aliases and configured behaviours
 
@@ -83,7 +82,6 @@ List all cloudfront distributions with aliases and configured behaviours
 
     a3f4d2uflw1se3.cloudfront.net   my.example.com  *-->my.example.com.s3-website-us-east-1.amazonaws.com
     ad34d2rclw1w4e.cloudfront.net   web.example.com  *-->web.example.com.s3-website-us-east-1.amazonaws.com
-
 
 Get the traceroute of AWS setup for a DNS record created in Route53
 
@@ -97,9 +95,8 @@ Get the traceroute of AWS setup for a DNS record created in Route53
     cloudfront details:
     a3f4d2uflw1se3.cloudfront.net   my.example.com  *-->my.example.com.s3-website-us-east-1.amazonaws.com
 
-
 List all configured commands at any time
-        
+
     awss 
 
 
@@ -119,8 +116,6 @@ List all configured commands at any time
     Fetch latest data from AWS          -	awss update
     Update project to latest version    -	awss upgrade
 
-
-
 Rename any command(s) at any time
 
     awss configure
@@ -128,27 +123,23 @@ Rename any command(s) at any time
 Fetch latest data quickly from AWS
 
     awss update
-        
+
 Update Project codebase to latest version for new features
 
     awss upgrade
 
-
 All list commands support pattern(s), specify the pattern for specific result else all dataset will be returned
 
+Steps to set the project -
 
-Steps to set the project - 
+1. Install aws cli <https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html>
 
-1. Install aws cli https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html
-           
 2. Configure aws secret key and access key as same credentials will be used to query AWS resources
-    
-       aws configure
+
+        aws configure
 
 3. Run the following command to set project with default commands
 
-       curl -s https://raw.githubusercontent.com/sunil-saini/aws_shortcuts/master/awss.sh -o awss.sh && . ./awss.sh && rm awss.sh
-    
-
+        curl -s https://raw.githubusercontent.com/talk-to/aws_shortcuts/master/awss.sh -o awss.sh && . ./awss.sh && rm awss.sh
 
 Happy Coding, Enjoy.
